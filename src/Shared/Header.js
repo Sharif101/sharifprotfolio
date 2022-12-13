@@ -16,7 +16,7 @@ const Header = () => {
     </React.Fragment>
   );
   return (
-    <div className="bg-[#EFEAE6] fixed w-full z-10">
+    <div className="bg-[#EFEAE6]">
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

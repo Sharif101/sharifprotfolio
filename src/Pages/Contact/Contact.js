@@ -32,23 +32,27 @@ const Contact = () => {
           placeholder="Name"
           name="name"
           className="input input-bordered input-md w-full max-w-xs"
+          required
         />
         <input
           type="email"
           placeholder="Email"
           name="email"
           className="input input-bordered input-md w-full max-w-xs"
+          required
         />
         <input
           type="text"
           placeholder="Subject"
           name="subject"
           className="input input-bordered input-md w-full max-w-xs"
+          required
         />
         <textarea
           className="textarea textarea-bordered w-full max-w-xs"
           placeholder="Body"
           name="message"
+          required
         ></textarea>
 
         <button className="button-30 mb-6" type="submit">
