@@ -98,4 +98,11 @@
   .typewritter span {
     font-size: 18px;
   }
+  .about {
+    margin-top: 50px;
+  }
+}
+
+.about_code {
+  background-color: rgba(0, 0, 0, 0.842) !important;
 }

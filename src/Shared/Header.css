@@ -1,0 +1,24 @@
+/* .showName {
+  display: block;
+}
+.hideName {
+  display: none;
+}
+.visible {
+  position: absolute;
+  background: #ecf0f3;
+  box-shadow: 2px 2px 8px #cbced1, 0px 0px 8px #ffffff;
+  padding: 5px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  color: #fe589a;
+  font-weight: 600;
+} */
+
+.acc-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+}

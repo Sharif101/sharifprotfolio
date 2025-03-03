@@ -1,0 +1,8 @@
+.footer_icon a {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.footer_icon {
+  display: flex;
+}

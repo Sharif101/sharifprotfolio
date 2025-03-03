@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider/AuthProvider";
+import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  let [username, setUsername] = useState(false);
+  let handleSingout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   let menuitems = (
     <React.Fragment>
       <li>
@@ -11,7 +20,53 @@ const Header = () => {
         <Link to="/projects">Projects</Link>
       </li>
       <li>
+        <Link to="/blogs">Blogs</Link>
+      </li>
+      <li>
         <Link to="/contact">Contact</Link>
+      </li>
+
+      <li>
+        {" "}
+        {user?.uid ? (
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        ) : (
+          <Link className="hidden"></Link>
+        )}
+      </li>
+
+      <li>
+        {user?.photoURL && (
+          <div className="nav-image">
+            <img
+              src=""
+              alt=""
+              onMouseEnter={() => setUsername(true)}
+              onMouseLeave={() => setUsername(false)}
+              className="acc-img"
+            />
+            <p className={username ? "visible showName" : "visible hideName"}>
+              {user?.displayName}
+            </p>
+          </div>
+        )}
+      </li>
+
+      <li>
+        {" "}
+        {user?.uid ? (
+          <li>
+            <button variant="info" onClick={handleSingout}>
+              Log Out
+            </button>
+          </li>
+        ) : (
+          <Link to="/loginsharif369sharif" className="hidden">
+            <button> Log in</button>
+          </Link>
+        )}
       </li>
     </React.Fragment>
   );

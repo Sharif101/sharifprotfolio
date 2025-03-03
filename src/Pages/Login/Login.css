@@ -1,0 +1,41 @@
+.inptfield {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  margin: 20px 0;
+}
+.login-title h2 {
+  color: #ff6565e1;
+  font-size: 22px;
+  text-align: center;
+}
+.login-form {
+  border-radius: 14px;
+  background: #f0ebe793;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  margin: 50px auto;
+  padding: 20px;
+}
+.inptfield label {
+  color: rgba(68, 68, 68, 0.829);
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.inptfield input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 13px;
+  color: #555;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.login-icon p {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px 0;
+}

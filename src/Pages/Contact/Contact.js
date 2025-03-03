@@ -1,32 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Contact = () => {
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // let { user } = useContext(AuthContext);
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_1n8z7dk",
-        "template_rqyp2h1",
-        e.target,
-        "qeo4yR7EC0yIc9ANB"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_1n8z7dk",
+  //       "template_rqyp2h1",
+  //       e.target,
+  //       "qeo4yR7EC0yIc9ANB"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   e.target.reset();
+  // };
   return (
     <div>
       <h4 className="form-title">Contact Here!</h4>
-      <form className="email-form" onSubmit={sendEmail}>
+      {/* onSubmit={sendEmail} */}
+      <form className="email-form">
         <input
           type="text"
           placeholder="Name"
@@ -39,6 +42,8 @@ const Contact = () => {
           placeholder="Email"
           name="email"
           className="input input-bordered input-md w-full max-w-xs"
+          // defaultValue={user.email}
+          // disabled
           required
         />
         <input
